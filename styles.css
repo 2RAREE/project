@@ -1,0 +1,731 @@
+
+Universal Box-Sizing Rule
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* CSS Reset or Normalize (optional but recommended) */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, blockquote, dl, dd {
+    margin:0;
+    padding:0;
+    box-sizing:inherit; /* Optional if you set box-sizing globally */
+}
+
+
+
+/* Base Styles */
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh; /* Ensures full viewport height */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+
+/* Header Styling begins from here */
+.navbar{
+    position: fixed;
+    top: 0;
+    left:0;
+    width:100%;
+    z-index: 1000; /*Ensures navbar is above other elements*/ 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    background-color:transparent;
+    padding:0.6rem;
+    align-items: center;
+    transition: 0.8s;
+    font-size: larger;  
+} 
+
+.navbar nav {
+    height: 8vh;
+    margin: 0 1.2rem;
+    display:flex;
+    justify-content: space-around;
+    /* align-items: center; */
+
+
+}
+
+.navbar nav #logo .fa-solid{
+    color: #edc63a;
+    font-size: 38px;
+}
+
+.navbar nav #logo{
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+    align-items: center;
+    font-size: 30px;
+}
+
+.navbar nav #logo h3{
+    font: size 26px;;
+}
+
+.navbar nav .fa-solid{
+    font-size: 38px;
+}
+
+.navbar nav .highlight{
+    color: #f4a811;
+}
+
+.navbar nav ul{
+    display:flex;
+    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.navbar nav ul li{
+    font-size: x-large;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.navbar nav ul a{
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: 0.5s;
+    color: black;
+}
+
+.navbar nav ul li a:hover {
+    background-color: #e7c20ee4;
+    border-radius: 4px;
+  }
+
+.navbar nav .icon{
+    display: flex;
+    justify-content: space-around;
+    margin:5px;
+    align-items:center;
+    padding: 5px;
+  }
+
+  .navbar nav .icon i{
+    margin-left:1.3rem;
+    margin-right:0;
+  }
+
+  button{
+    border-radius: 2rem;
+    margin-left: 2rem;
+    height:2rem;
+    background-color: rgba(252, 192, 80, 0.666);
+  } /*END OF HEADER STYLING*/
+
+
+/* Beginning of styling for the main part of the body */
+main {
+    display: flex;
+    flex-direction: column; /* Stacks all sections */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    min-width: 100vw;
+    height: auto;
+    background:repeating-radial-gradient(circle,
+    rgba(199, 189, 56, 0.991) 0%,  /* Inner intense color */
+    rgb(254, 254, 244) 25%, /* Outer light color */
+    #fff64c 200%);
+}
+
+section{
+    min-width: 100vw;
+    min-height: 100vh;
+    margin-top:10rem;
+}
+section h1,
+section h2,
+section p {
+    margin: 0;
+}
+
+main #home {
+    /* margin-top: 5rem; */
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* helps to Center content inside #home */
+    width: 80%; /* Responsive width */
+    min-height: 100vh; /* Adjust height based on content */
+    padding-top: 150px;
+    border-radius: 10px; /* Optional styling */
+    background:repeating-radial-gradient(circle,
+    rgba(199, 189, 56, 0.991) 0%,  /* Inner intense color */
+    rgb(254, 254, 244) 25%, /* Outer light color */
+    #fff64c 200%);
+}
+
+main #home .home{
+    text-align: center;
+    width: 42vw;
+    justify-content: center;
+}
+
+main #home .home h1{
+    font-size: 66px;
+    width: fit-content;
+    text-align: center;
+    justify-content: center;
+}
+
+#home .home #first{
+    font-size: 26px;
+    margin:auto;
+    width:fit-content;
+    padding: 0.8rem;
+    background-color: rgba(227, 186, 96, 0.482);
+    border-radius: 2rem;
+}
+
+main #home .home h1{
+    font-size: 80px;
+    margin: 1.3rem;
+    width:fit-content;
+}
+
+main #home .home p{
+    font-size: 26px;
+    font-weight: 20;
+    text-align: center;
+    
+}
+
+main #home .home #homebuttons{
+    margin:10rem;
+    justify-content:space-around;
+    align-items: center;
+
+}
+
+
+#homebuttons #who{
+    background-color: rgba(199, 149, 23, 0.959);
+    border:0.5px solid rgba(199, 149, 23, 0.959);
+    /* margin-bottom:1rem; */
+
+    padding:0 15px;
+    width:max-content;
+    font-size: 25px;
+    font-weight: 500;
+    
+
+}
+main #home .home #homebuttons #who:hover{
+   background-color: black;
+   color:rgb(241, 198, 87);
+     
+}
+
+#homebuttons #contactus{
+    background-color:transparent;
+    border:1px solid rgba(199, 149, 23, 0.959);
+    padding:0 15px;
+    width:max-content;
+    font-size:25px;
+    /* font: 25px sans-serif; */
+    font-weight: 500;
+   
+
+}
+#homebuttons #contactus:hover{
+    border:1px solid black;
+}
+ 
+.imageContainer{
+    display: flex;
+    gap:8rem;
+    height: auto;
+    width:80vw;
+    /* margin:15px 0; */
+}
+main #home .imageContainer img{
+    border-radius: 1.2rem;
+    width: 16vw;
+    height:55vh;
+    /* gap: 3rem; */
+
+
+    /*END OF HOME SECTION*/
+}
+
+/* ABout us */
+#aboutus{
+    
+    /* min-width: 100vw; */
+    /* height: 100vh; */
+}
+#aboutus .about-container{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    /* margin-bottom:10px; */
+
+    /* justify-content: center; */
+    /* max-width: auto; */
+    /* background-color: white; */
+    /* display: flex; */
+    /* justify-content: center;
+    margin: 2rem; */
+}
+
+#aboutus .about-container .pure-container{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    /* styling for pure-unfiltered div */
+    .pure_unfiltered{
+        width:40vw;
+        margin-right:3rem;
+        align-content: center;
+        
+        h2{
+            font-size: 64px;
+            margin-bottom:15px ;
+        }
+        p{
+            font-size: 27px;
+            margin-bottom: 45px;
+        } 
+
+        a:hover{
+            background-color: black;
+            color:orange
+        }
+        a {
+            /* margin-top: 15px; */
+            font-size:32px;
+            font-weight: 500;
+            text-decoration: none;
+            border:2px solid olive;
+            background-color: #edc63a;
+            padding:15px;
+            color: black;
+            border-radius: 20px;
+            margin: 0;   
+            /* padiding:25px*/
+        
+           
+        }
+
+    }
+
+    .bees img{
+        border-radius: 28px;
+        height:550px;
+    }
+    
+}
+
+#aboutus .about-container .complete{
+    h1{
+        font-size: 66px;
+        width:38vw;
+        text-align:center;
+        margin:2rem 0; 
+    }
+
+    p{
+        font-size:26px;
+        margin:2rem 0;
+        text-align:center;
+        font-weight:100;
+        width:38vw;
+
+    }
+   
+}
+
+#aboutus .about-container .big_image img{
+ width: 80vw;
+ height: 85vh;
+ border-radius: 2rem;
+}
+
+
+#aboutus .about-container .main_stats{
+    display:flex;
+    margin-top:5rem;
+    width:80vw;
+    /* background-color: #fff64c; */
+    margin-left:33px;
+    
+    
+}
+
+#aboutus .about-container .main_stats .clients_div{
+   
+
+    h2{
+        font-size: 50px;
+        margin-bottom:2rem;
+        width: 35vh;
+        
+    }
+
+    p{
+        font-size: 26px;
+        margin-bottom:5rem;
+        width: 45vh;
+        padding-top: 2rem;
+        text-align: left;
+    }
+
+    button{
+        padding:1.5rem 1.4rem;
+        /* justify-content: center; */
+        align-content: center;
+        /* text-align: center; */
+    }
+}
+
+
+
+#aboutus .about-container .main_stats .figure_stats{
+    
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:2rem;
+    margin-left:8rem;
+    /* margin: 6rem; */
+
+    .numbers{
+        width:25vw;
+        height: 20vh;
+        /* background-color: aqua; */
+        border:2px solid rgb(225, 187, 137);
+        border-radius:1.5rem;
+        font-size: 34px;
+        align-content: center;
+        padding-left: 2rem;
+
+    }
+
+    .numbers:hover{
+        background-color:rgb(238, 190, 101);
+    }
+    
+    .numbers{
+        background-color: white;
+    }
+
+    #two_hundred{
+        background-color: hsl(42, 33%, 88%);
+        
+    }
+
+    #two_hundred:hover{
+        background-color:rgb(238, 190, 101);   
+    }
+}
+
+
+
+/***************************************
+**Pricing section styling begins here **
+****************************************/
+.pricing {
+    display:flex;
+    flex-direction: column;
+    align-items: center;background-color: white;
+}
+
+.pricing .our-products{
+   
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    width: 80vw;
+    /* margin-bottom: 3rem; */
+    
+
+    .offerings{
+    width: 40vw;
+       
+        h2{
+            font-size:54px;
+            margin-bottom:3rem;
+        }
+
+        p{
+            font-size: 24px;
+
+        }
+    }
+
+
+    .viewall{
+
+        a{
+            background-color: rgba(246, 187, 25, 0.811) ;
+            text-decoration: none;
+            border: 2px solid red;
+            border-radius: 4rem;
+            font-size: 25px;
+            padding: 10px;
+            margin: 20px;
+
+            
+        }
+
+        a:hover{
+            background-color: black;
+            color:rgba(246, 187, 25, 0.811);
+        }
+    }
+
+}
+
+/* styling for the products prices */
+.pricing .honey-products-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:2rem;
+    width: 80vw;
+    height: 55vh;
+    
+  
+    a{/*anchor styling*/
+        background-color:transparent ;
+        text-decoration: none;
+        border: 2px solid rgb(245, 218, 63);
+        border-radius: 4rem;
+        font-size: 25px;
+        padding: 10px; 
+        margin-top: 20rem;
+    }
+
+    a:hover{
+        background-color: black;
+        color:rgba(246, 187, 25, 0.811);
+    }
+    
+    img{/*image styling*/
+        
+        width: 19vw;
+        height: fit-content;
+        border-radius: 3rem;
+        height: 30vh;
+
+        
+    }
+
+    p{
+        margin: 1.5rem;
+    }
+
+
+    .product1{
+       
+        width:20vw ;
+        /* height: 10vh; */
+        
+
+      
+    }
+    
+    .product2{
+       
+        width:20vw ;
+       
+    }
+    
+    .product3{
+       
+        width:20vw;
+        height: 10vh;
+    }
+    
+    .product4{
+        
+        width:20vw ;
+        height: 10vh;
+        
+    }
+}
+
+/* community starts here */
+
+#OurCommunity{
+    width: 100vw;
+    height:60vh;
+    margin-bottom:9rem;
+}
+
+.community_container{
+
+    width: 100vw;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+
+    .ladyeating_honey_comb{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80vw;
+        height:80vh;
+        margin-bottom:10rem;
+
+        .text{
+          
+            p{
+                font-size: 40px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bolder;
+                width: 54vw;
+                line-height:1.5em;
+            }
+        }
+
+
+        .picture{
+            img{
+                width: 25vw;
+                height:45vh;
+                border-radius:3rem;
+            }
+           
+        }
+
+    }
+
+    .thriving_community{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        background-color: #edc63a;
+        border-radius: 3rem;
+
+
+        .droppinghoney{
+            img{
+                width: 25vw;
+                height:55vh;
+                border-radius:3rem;
+                margin:2rem;
+            }
+        }
+        
+
+        .commu{
+            border-radius: 6rem;
+            align-content: center;
+            h2{
+                font-size: 66px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bolder;
+                width: 38vw;
+                line-height:1.2em;
+                padding:15px;
+                margin-bottom: 2rem;
+
+            }
+
+            p{
+                font-size: 32px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                width: 40vw;
+                /* line-height:1.5em; */
+                margin-bottom: 3rem;
+
+            }
+
+            a{/*anchor styling*/
+                background-color:black ;
+                text-decoration: none;
+                border-radius: 4rem;
+                font-size: 35px;
+                color: #edc63a;;
+                padding: 22px; 
+                
+                
+            }
+
+            a:hover{
+                background-color: transparent;
+                color:rgba(246, 187, 25, 0.811);
+                border:2px solid black;
+                color: black;
+            }
+        }
+
+    }
+}
+
+/* Footer Styling */
+
+footer p .highlight{
+    color: #0acc34;
+    text-align: center;
+}
+footer p{
+    font-size:larger;
+    color: black;
+    text-align: center;
+}
+/* General styles for the footer */
+footer {
+    background-color: #f0f08ca2; 
+    color: white;           
+    padding: 20px;          
+    text-align: center;      
+    font-size: 18px;  
+    font-weight: 800;       
+    position: relative;      /* Ensures footer stays at the bottom */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Links inside the footer */
+footer a {
+    color: rgba(30, 31, 27, 0.742);           
+    text-decoration: none; 
+    margin: 0 10px;         
+}
+
+/* Hover effect for links */
+footer a:hover {
+    text-decoration: underline;  
+}
+
+/* Footer list */
+footer ul {
+    list-style: none;     
+    padding: 0;            /* Removes default padding */
+    margin: 10px 0;        /* Adds margin on top and bottom */
+}
+
+footer ul li {
+    display: inline-block; /* Display the list items horizontally */
+    margin: 0 10px;       
+}
+
+/*  Smaller screens */
+@media screen and (max-width: 600px) {
+    footer {
+        font-size: 12px;   
+        padding: 10px;     
+    }
+
+    footer ul {
+        text-align: center; /* Center align the list on small screens */
+    }
+
+    footer ul li {
+        display: block;     /* Stack the list items vertically */
+        margin: 5px 0;      /* Add space between the items */
+    }
+}
+
